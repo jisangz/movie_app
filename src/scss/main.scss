@@ -1,0 +1,50 @@
+// $color--black:#000;
+// $color--white:#fff;
+
+// body{
+//     background-color: $color--black;
+//     h1{
+//         color: $color--white;
+//         font-size: 40px;
+//         display: flex;
+//     }
+// }
+
+//재정의가 필요한 경우 호출전에 명시를 해주어야 반영이 된다.
+$primary : #FDC000;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 704px,
+  lg: 924px,
+  xl: 1140px,
+  xxl: 1364px
+);
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//부분 대체일경우 하단에 배치 (변수가 생성되지 않아 상단배치시 에러가 발생한다.)
+// $theme-colors:(
+//   "primary":  orange,
+//   "secondary":red,
+//   "success" :   $success,
+//   "info" :      $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark,
+// );
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+
