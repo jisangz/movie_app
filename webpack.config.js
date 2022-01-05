@@ -2,7 +2,8 @@ const path = require('path')
 const Htmlplugin = require('html-webpack-plugin')
 const Copyplugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
- 
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
     resolve:{
       extensions : ['.js','.vue','.scss'],
@@ -66,7 +67,8 @@ module.exports = {
                 { from :'src' }
             ]
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new Dotenv()
     ],
     devServer:{
         host:'localhost'
